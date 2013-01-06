@@ -1,0 +1,190 @@
+/*
+Theme Name: NoCss
+Theme URI: http://hao.su/blog/wordpress-themes
+Description: White and clean theme almost without css styles. Fonts and colors will be default of your browser.
+Version: 1.0
+Author: Kolius
+Author URI: http://hao.su
+Tags: white, simple, fixed width, two columns, widgets, clean
+*/
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+body {
+	font-size: 80%; /* Resets 1em to 10px */
+	background-color:white;
+	margin: 40px;
+	line-height: 1.5em;
+	
+	}
+#content {
+	float:left;
+	width:600px;
+	}
+#sidebar {
+	width:300px;
+	float:right;
+	text-align:left;
+	}	
+#footer {
+	padding: 20px 0 0 1px;
+	margin-top: 0;
+	width: 100%;
+	clear: both;
+	text-align:left;
+	}	
+#page {
+	padding: 0;
+	width: 960px;
+	float:left;
+	}
+#commentform input {
+	width: 170px;
+	padding: 2px;
+	margin: 5px 5px 1px 0;
+	}
+
+#commentform textarea {
+	width: 100%;
+	padding: 2px;
+	}
+
+h3, h2, h1{
+	margin:0px;
+	}
+	
+.narrowcolumn .postmetadata {
+	font-size:small;
+	margin-top:0px;
+	margin-bottom:5px;
+	}
+
+.more-link {
+text-align:left;
+}
+
+.navigation {
+	margin-top: 10px;
+	margin-bottom: 50px;
+	}
+	
+#header p{
+	margin:0px;
+	padding:0px;
+	}
+	
+#sidebar ul, #sidebar ul ol {
+	margin: 0;
+	padding: 0;
+	}
+
+#sidebar ul li {
+	list-style-type: none;
+	list-style-image: none;
+	}
+
+.post {
+border-bottom:1px solid black;
+}
+
+	/* Begin Images */
+p img {
+	padding: 0;
+	max-width: 100%;
+	}
+
+/*	Using 'class="alignright"' on an image will (who would've
+	thought?!) align the image to the right. And using 'class="centered',
+	will of course center the image. This is much better than using
+	align="center", being much more futureproof (and valid) */
+a img {
+	border: none;
+	}
+img.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+	}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+	}
+
+.alignright {
+	float: right;
+	}
+	
+.alignleft {
+	float: left;
+	}
+/* End Images */
+
+a {
+	color: black;
+}
+
+/* HEADER STUFF */
+h1 {
+	font-family: 'Courier New', monospace;	
+	font-weight: normal;
+	font-size: 2.5em;
+	width: 600px;
+}
+
+h1 > a {
+	text-decoration: none;
+}
+
+.description {
+	padding: 40px 0;
+	width: 600px;
+}
+
+.prof { 
+	width: 300px;
+	float: right;
+	margin-bottom: 40px;	
+}
+
+/* POST STUFF */
+h2 {
+	font-family: 'Courier New', monospace;	
+	font-weight: normal;
+	background: black;
+	font-size: 1em;
+	padding: 3px;
+}
+
+h2 > a, .widgettitle {
+	text-decoration: none;
+	color: white;
+}
+
+.widget {
+	padding-bottom: 40px;
+}
+
+.widgettitle {
+	margin-bottom: 10px;
+}
+
+	

@@ -1,0 +1,626 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Kubrick\n"
+"Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
+"POT-Creation-Date: 2008-03-26 13:02+0200\n"
+"PO-Revision-Date: 2008-03-30 21:16+0300\n"
+"Last-Translator: Sol <salpagarov@gmail.com>\n"
+"Language-Team: wordpress-russia.org <team@wordpress-russia.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Poedit-Language: Russian\n"
+"X-Poedit-Country: RUSSIAN FEDERATION\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: 404.php:5
+msgid "Error 404 - Not Found"
+msgstr "Ошибка 404 - Не найдено"
+
+#: archive.php:9
+#, php-format
+msgid "Archive for the &#8216;%s&#8217; Category"
+msgstr "Архив рубрики &#8216;%s&#8217;"
+
+#: archive.php:11
+#, php-format
+msgid "Posts Tagged &#8216;%s&#8217;"
+msgstr "Записи, помеченные &#8216;%s&#8217;"
+
+#: archive.php:13
+#, php-format
+msgid "Archive for %s|Daily archive page"
+msgstr "%s|Архив дня"
+
+#: archive.php:13
+#: comments.php:37
+#: index.php:11
+msgid "F jS, Y"
+msgstr "j/m/Y"
+
+#: archive.php:15
+#, php-format
+msgid "Archive for %s|Monthly archive page"
+msgstr "%s|Архив месяца"
+
+#: archive.php:15
+#: sidebar.php:27
+msgid "F, Y"
+msgstr "F, Y "
+
+#: archive.php:17
+#, php-format
+msgid "Archive for %s|Yearly archive page"
+msgstr "%s|Архив года"
+
+#: archive.php:17
+msgid "Y"
+msgstr "Y"
+
+#: archive.php:19
+msgid "Author Archive"
+msgstr "Архив автора"
+
+#: archive.php:21
+msgid "Blog Archives"
+msgstr "Архив"
+
+#: archive.php:26
+#: archive.php:46
+#: index.php:23
+#: search.php:10
+#: search.php:27
+msgid "&laquo; Older Entries"
+msgstr "&laquo; Раньше"
+
+#: archive.php:27
+#: archive.php:47
+#: index.php:24
+#: search.php:11
+#: search.php:28
+msgid "Newer Entries &raquo;"
+msgstr "Позже &raquo;"
+
+#: archive.php:32
+#: index.php:10
+#: search.php:18
+#, php-format
+msgid "Permanent Link to %s"
+msgstr "Постоянная ссылка на %s"
+
+#: archive.php:33
+#: attachment.php:28
+#: image.php:24
+#: sidebar.php:24
+#: single.php:27
+msgid "l, F jS, Y"
+msgstr "l, j/m/Y "
+
+#: archive.php:39
+#: index.php:17
+#: search.php:21
+#: single.php:19
+msgid "Tags:"
+msgstr "Метки:"
+
+#: archive.php:39
+#: index.php:17
+#: search.php:21
+#, php-format
+msgid "Posted in %s"
+msgstr "Опубликовано в %s"
+
+#: archive.php:39
+#: index.php:17
+#: search.php:21
+msgid "Edit"
+msgstr "Править"
+
+#: archive.php:39
+#: index.php:17
+#: search.php:21
+msgid "No Comments &#187;"
+msgstr "Нет комментариев &#187;"
+
+#: archive.php:39
+#: index.php:17
+#: search.php:21
+msgid "1 Comment &#187;"
+msgstr "1 Комментарий &#187;"
+
+#: archive.php:39
+#: index.php:17
+#: search.php:21
+msgid "% Comments &#187;"
+msgstr "% Комментариев &#187;"
+
+#: archive.php:52
+#: index.php:29
+msgid "Not Found"
+msgstr "Не найдено"
+
+#: archives.php:13
+msgid "Archives by Month:"
+msgstr "Архив по месяцам:"
+
+#: archives.php:18
+msgid "Archives by Subject:"
+msgstr "Архив по Теме:"
+
+#: attachment.php:14
+#, php-format
+msgid "Permanent Link: %s"
+msgstr "Постоянная ссылка: %s"
+
+#: attachment.php:18
+#: image.php:12
+#: index.php:14
+#: single.php:16
+msgid "Read the rest of this entry &raquo;"
+msgstr "Прочитать остальную часть записи &raquo;"
+
+#: attachment.php:20
+#: image.php:14
+#: page.php:11
+#: single.php:18
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: attachment.php:28
+#: single.php:27
+#, php-format
+msgid "This entry was posted %1$s on %2$s at %3$s and is filed under %4$s."
+msgstr "Эта запись опубликована %1$s в %2$s, %3$s и размещена в рубрике %4$s."
+
+#: attachment.php:29
+#: image.php:26
+#: single.php:28
+#, php-format
+msgid "You can follow any responses to this entry through the <a href='%s'>RSS 2.0</a> feed."
+msgstr "Вы можете следить за обсуждением этой записи с помощью <a href='%s'>ленты RSS 2.0</a>."
+
+#: attachment.php:33
+#: image.php:30
+#: single.php:32
+#, php-format
+msgid "You can <a href=\"#respond\">leave a response</a>, or <a href=\"%s\" rel=\"trackback\">trackback</a> from your own site."
+msgstr "Вы можете <a href=\"#respond\">оставить отзыв</a>, или <a href=\"%s\" rel=\"trackback\">обратную ссылку</a> с вашего сайта."
+
+#: attachment.php:37
+#: image.php:34
+#: single.php:36
+#, php-format
+msgid "Responses are currently closed, but you can <a href=\"%s\" rel=\"trackback\">trackback</a> from your own site."
+msgstr "Ответы сейчас закрыты, но Вы можете разместить <a href=\"%s\" rel=\"trackback\">обратную ссылку</a> на своем сайте."
+
+#: attachment.php:41
+#: image.php:38
+#: single.php:40
+msgid "You can skip to the end and leave a response. Pinging is currently not allowed."
+msgstr "Вы можете перейти в конец и оставить комментарий. Уведомления сейчас отключены."
+
+#: attachment.php:45
+#: image.php:42
+#: single.php:44
+msgid "Both comments and pings are currently closed."
+msgstr "Комментарии и уведомления сейчас закрыты."
+
+#: attachment.php:47
+#: image.php:44
+#: page.php:16
+#: single.php:46
+msgid "Edit this entry."
+msgstr "Править эту запись."
+
+#: attachment.php:59
+msgid "Sorry, no attachments matched your criteria."
+msgstr "Извините, нет файлов, удовлетворяющих вашим условиям."
+
+#: comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Это сообщение защищено паролем. Введите пароль, чтобы посмотреть комментарий."
+
+#: comments.php:23
+msgid "No Responses"
+msgstr "Нет отзывов"
+
+#: comments.php:23
+msgid "One Response"
+msgstr "Один отзыв"
+
+#: comments.php:23
+msgid "% Responses"
+msgstr "% отзывов"
+
+#: comments.php:23
+#, php-format
+msgid "to &#8220;%s&#8221;"
+msgstr "на &#8220;%s&#8221;"
+
+#: comments.php:31
+#, php-format
+msgid "<cite>%s</cite> Says:"
+msgstr "<cite>%s</cite> сказал:"
+
+#: comments.php:33
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш коментарий ожидает одобрения."
+
+#: comments.php:37
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: comments.php:37
+msgid "edit"
+msgstr "править"
+
+#: comments.php:59
+msgid "Comments are closed."
+msgstr "Коментарии запрещены."
+
+#: comments.php:67
+msgid "Leave a Reply"
+msgstr "Оставить ответ"
+
+#: comments.php:70
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Вы должны <a href=\"%s\">авторизоваться</a> для отправки комментария."
+
+#: comments.php:77
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+msgstr "Вы вошли как <a href=\"%1$s\">%2$s</a>."
+
+#: comments.php:77
+msgid "Log out of this account"
+msgstr "Выйти из этого аккаунта"
+
+#: comments.php:77
+msgid "Log out &raquo;"
+msgstr "Выйти &raquo;"
+
+#: comments.php:82
+#: comments-popup.php:64
+msgid "Name"
+msgstr "Имя"
+
+#: comments.php:82
+#: comments.php:85
+msgid "(required)"
+msgstr "(обязательно)"
+
+#: comments.php:85
+msgid "Mail (will not be published)"
+msgstr "E-mail (не для публикации)"
+
+#: comments.php:88
+msgid "Website"
+msgstr "Web-сайт"
+
+#: comments.php:92
+#, php-format
+msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
+msgstr "<strong>XHTML:</strong> Вы можете использовать эту разметку: <code>%s</code>"
+
+#: comments.php:96
+msgid "Submit Comment"
+msgstr "Отправить"
+
+#: comments-popup.php:9
+#, php-format
+msgid "%1$s - Comments on %2$s"
+msgstr "%1$s - Комментарии на %2$s"
+
+#: comments-popup.php:22
+msgid "Comments"
+msgstr "Комментарии"
+
+#: comments-popup.php:24
+msgid "<abbr title=\"Really Simple Syndication\">RSS</abbr> feed for comments on this post."
+msgstr "<abbr title=\"Really Simple Syndication\">RSS</abbr> лента комментариев этой записи."
+
+#: comments-popup.php:27
+#, php-format
+msgid "The <abbr title=\"Universal Resource Locator\">URL</abbr> to TrackBack this entry is: <em>%s</em>"
+msgstr "<abbr title=\"Universal Resource Locator\">URL</abbr> для обратной ссылки к этой записи: <em>%s</em>"
+
+#: comments-popup.php:45
+msgid "Comment"
+msgstr "Комментарий"
+
+#: comments-popup.php:45
+msgid "Trackback"
+msgstr "Обратная ссылка"
+
+#: comments-popup.php:45
+msgid "Pingback"
+msgstr "Оповещение"
+
+#: comments-popup.php:45
+#, php-format
+msgid "by %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
+msgstr "от %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
+
+#: comments-popup.php:51
+msgid "No comments yet."
+msgstr "Комментариев нет."
+
+#: comments-popup.php:55
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: comments-popup.php:56
+#, php-format
+msgid "Line and paragraph breaks automatic, e-mail address never displayed, <acronym title=\"Hypertext Markup Language\">HTML</acronym> allowed: <code>%s</code>"
+msgstr "Строки и абзацы разделяются автоматически, адреса e-mail никогда не показываются, разрешенный <acronym title=\"Hypertext Markup Language\">HTML</acronym>: <code>%s</code>"
+
+#: comments-popup.php:60
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out &raquo;</a>"
+msgstr "Вы вошли как <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Выйти\">Выйти &raquo;</a>"
+
+#: comments-popup.php:71
+msgid "E-mail"
+msgstr "E-mail"
+
+#: comments-popup.php:76
+msgid "<abbr title=\"Universal Resource Locator\">URL</abbr>"
+msgstr "<abbr title=\"Universal Resource Locator\">URL</abbr>"
+
+#: comments-popup.php:81
+msgid "Your Comment"
+msgstr "Ваш комментарий"
+
+#: comments-popup.php:87
+msgid "Say It!"
+msgstr "Сказать это!"
+
+#: comments-popup.php:92
+msgid "Sorry, the comment form is closed at this time."
+msgstr "Извините, обсуждение на данный момент закрыто."
+
+#: comments-popup.php:97
+msgid "Close this window."
+msgstr "Закрыть окно."
+
+#: comments-popup.php:105
+#, php-format
+msgid "Powered by <a href=\"%s\" title=\"Powered by WordPress, state-of-the-art semantic personal publishing platform\"><strong>WordPress</strong></a>"
+msgstr "Работает на <a href=\"%s\" title=\"Работает на WordPress, современной семантической платформе персональных публикаций\"><strong>Wordpress</strong></a>"
+
+#: footer.php:6
+#, php-format
+msgid "%1$s is proudly powered by %2$s"
+msgstr "%1$s работает на %2$s"
+
+#: footer.php:8
+#, php-format
+msgid "%1$s and %2$s."
+msgstr "%1$s и %2$s."
+
+#: footer.php:8
+msgid "Entries (RSS)"
+msgstr "Записи (RSS)"
+
+#: footer.php:8
+msgid "Comments (RSS)"
+msgstr "Комментарии (RSS)"
+
+#: footer.php:9
+#, php-format
+msgid "%d queries. %s seconds."
+msgstr "%1$d запросов и %2$s секунд."
+
+#: functions.php:149
+msgid "Customize Header"
+msgstr "Настройка заголовка"
+
+#: functions.php:149
+#: functions.php:363
+msgid "Header Image and Color"
+msgstr "Изображение и цвет заголовка"
+
+#: functions.php:162
+msgid "Close Color Picker"
+msgstr "Закрыть окно выбора цвета"
+
+#: functions.php:359
+msgid "Options saved."
+msgstr "Настройки сохранены."
+
+#: functions.php:376
+#: functions.php:383
+msgid "Save"
+msgstr "Сохранить"
+
+#: functions.php:377
+msgid "Font Color:"
+msgstr "Цвет шрифта:"
+
+#: functions.php:377
+#, php-format
+msgid "Any CSS color (%s or %s or %s)"
+msgstr "Любой цвет CSS (%s, %s или %s)"
+
+#: functions.php:378
+msgid "Upper Color:"
+msgstr "Верхний цвет:"
+
+#: functions.php:378
+#: functions.php:379
+#, php-format
+msgid "HEX only (%s or %s)"
+msgstr "Только HEX (%s или %s)"
+
+#: functions.php:379
+msgid "Lower Color:"
+msgstr "Нижний цвет:"
+
+#: functions.php:381
+msgid "Toggle Text"
+msgstr "Скрыть/показать текст"
+
+#: functions.php:382
+msgid "Use Defaults"
+msgstr "По умолчанию"
+
+#: functions.php:391
+msgid "Font Color"
+msgstr "Цвет шрифта"
+
+#: functions.php:392
+msgid "Upper Color"
+msgstr "Верхний цвет"
+
+#: functions.php:393
+msgid "Lower Color"
+msgstr "Нижний цвет"
+
+#: functions.php:394
+msgid "Revert"
+msgstr "Вернуть"
+
+#: functions.php:395
+msgid "Advanced"
+msgstr "Дополнительно"
+
+#: functions.php:402
+msgid "Update Header &raquo;"
+msgstr "Обновить заголовок &raquo;"
+
+#: functions.php:408
+msgid "Font Color (CSS):"
+msgstr "Цвет шрифта (CSS):"
+
+#: functions.php:409
+msgid "Upper Color (HEX):"
+msgstr "Верхний цвет (HEX):"
+
+#: functions.php:410
+msgid "Lower Color (HEX):"
+msgstr "Нижний цвет (HEX):"
+
+#: functions.php:411
+msgid "Select Default Colors"
+msgstr "Выбрать цвета по умолчанию"
+
+#: functions.php:412
+msgid "Toggle Text Display"
+msgstr "Скрыть/показать текст"
+
+#: header.php:9
+msgid "&raquo; Blog Archive"
+msgstr "&raquo; Архив блога"
+
+#: header.php:14
+#, php-format
+msgid "%s RSS Feed"
+msgstr "RSS лента для %s"
+
+#: image.php:24
+#, php-format
+msgid "This entry was posted on %1$s at %2$s and is filed under %3$s."
+msgstr "Эта запись опубликована %1$s в %2$s и размещена в рубрике %3$s."
+
+#: image.php:57
+#: single.php:58
+msgid "Sorry, no posts matched your criteria."
+msgstr "Извините, нет записей, удовлетворяющих вашим условиям."
+
+#: index.php:30
+msgid "Sorry, but you are looking for something that isn&#8217;t here."
+msgstr "Извините, но вы ищите что-то, что находится не здесь"
+
+#: links.php:11
+msgid "Links:"
+msgstr "Ссылки:"
+
+#: page.php:9
+msgid "Read the rest of this page &raquo;"
+msgstr "Читать остальную часть этой страницы &raquo;"
+
+#: searchform.php:3
+msgid "Search"
+msgstr "Поиск"
+
+#: search.php:7
+msgid "Search Results"
+msgstr "Результаты поиска"
+
+#: search.php:33
+msgid "No posts found. Try a different search?"
+msgstr "Записей не найдено. Попробуете другой поиск?"
+
+#: sidebar.php:10
+msgid "Author"
+msgstr "Автор"
+
+#: sidebar.php:21
+#, php-format
+msgid "You are currently browsing the archives for the %s category."
+msgstr "Вы просматриваете архив рубрики %s."
+
+#: sidebar.php:24
+#, php-format
+msgid "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives for the day %3$s."
+msgstr "Вы просматриваете архив блога <a href=\"%1$s/\">%2$s</a> за день %3$s."
+
+#: sidebar.php:27
+#, php-format
+msgid "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives for %3$s."
+msgstr "Вы просматриваете архив <a href=\"%1$s/\">%2$s</a> блога %3$s."
+
+#: sidebar.php:30
+#, php-format
+msgid "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives for the year %3$s."
+msgstr "Вы просматриваете архив блога <a href=\"%1$s/\">%2$s</a> за %3$s год."
+
+#: sidebar.php:33
+#, php-format
+msgid "You have searched the <a href=\"%1$s/\">%2$s</a> blog archives for <strong>&#8216;%3$s&#8217;</strong>. If you are unable to find anything in these search results, you can try one of these links."
+msgstr "Вы ищите в архиве блога <a href=\"%1$s/\">%2$s</a> за <strong>&#8216;%3$s&#8217;</strong>. Если вам не удалось ничего найти в результатах поиска, вы можете попробовать одну из следующих ссылок."
+
+#: sidebar.php:36
+#, php-format
+msgid "You are currently browsing the <a href=\"%1$s/\">%2$s</a> blog archives."
+msgstr "Вы просматриваете архив <a href=\"%1$s/\">%2$s</a> блога."
+
+#: sidebar.php:42
+msgid "Pages"
+msgstr "Страницы"
+
+#: sidebar.php:44
+msgid "Archives"
+msgstr "Архивы"
+
+#: sidebar.php:50
+msgid "Categories"
+msgstr "Рубрики"
+
+#: sidebar.php:55
+msgid "Meta"
+msgstr "Прочее"
+
+#: sidebar.php:59
+msgid "This page validates as XHTML 1.0 Transitional"
+msgstr "Эта страница соответствует стандарту XHTML 1.0 Transitional"
+
+#: sidebar.php:59
+msgid "Valid <abbr title=\"eXtensible HyperText Markup Language\">XHTML</abbr>"
+msgstr "Правильный <abbr title=\"eXtensible HyperText Markup Language\">XHTML</abbr>"
+
+#: sidebar.php:60
+msgid "XHTML Friends Network"
+msgstr "Сеть друзей XHTML (XFN)"
+
+#: sidebar.php:60
+msgid "XFN"
+msgstr "Отношение к ссылке (XFN)"
+
+#: sidebar.php:61
+msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
+msgstr "Сайт работает на WordPress, современной системе персональных публикаций."
+
