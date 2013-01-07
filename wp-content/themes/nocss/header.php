@@ -17,6 +17,10 @@
 </style>
 
 <?php wp_head(); ?>
+
+
+<?php include('analyticstracking.php'); ?>
+
 </head>
 <body>
 <div id="page">
@@ -24,12 +28,9 @@
 
 <div id="header">
 	<div id="headerimg">
-		<img class="prof" src=<?php bloginfo('stylesheet_directory'); ?>/images/prof-01.png />
+		<a href=<?php echo get_option('home');?>/about><img class="prof" src=<?php bloginfo('stylesheet_directory'); ?>/images/prof-01.png /></a>
 		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<div class="description">
-			What if we could receive real-time feedback on our social interactions? Would unbiased third party monitors be better suited to interpret situations and make decisions for the parties involved? How might this help us become more aware in our relationships, and more open to unexpected possibilities?
-			<br><br>
-			I am developing a system like this for myself using Amazon Mechanical Turk. During a series of meetings and dates with new people, I will discretely stream the interaction to the web using an iPhone app. Turk workers will be paid to watch the stream, interpret what is happening, and offer feedback as to what I should do or say next. This feedback will be communicated to me via text message.
+		<div class="description">What if we could receive real-time feedback on our social interactions? Would unbiased third party monitors be better suited to interpret situations and make decisions for the parties involved? How might augmenting our experience help us become more aware in our relationships, shift us out of normal patterns, and open us to unexpected possibilities? I am developing a system like this for myself using Amazon Mechanical Turk. During a series of meetings and dates with new people, I will discretely stream the interaction to the web using an iPhone app. Turk workers will be paid to watch the stream, interpret what is happening, and offer feedback as to what I should do or say next. This feedback will be communicated to me via text message.
 		</div>
 	</div>
 </div>

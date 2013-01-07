@@ -33,7 +33,7 @@ body {
 	width:600px;
 	}
 #sidebar {
-	width:300px;
+	width:250px;
 	float:right;
 	text-align:left;
 	}	
@@ -46,7 +46,7 @@ body {
 	}	
 #page {
 	padding: 0;
-	width: 960px;
+	width: 910px;
 	float:left;
 	}
 #commentform input {
@@ -160,7 +160,7 @@ h1 > a {
 }
 
 .prof { 
-	width: 300px;
+	width: 250px;
 	float: right;
 	margin-bottom: 40px;	
 }
@@ -172,6 +172,7 @@ h2 {
 	background: black;
 	font-size: 1em;
 	padding: 3px;
+	color: white;
 }
 
 h2 > a, .widgettitle {
@@ -185,6 +186,20 @@ h2 > a, .widgettitle {
 
 .widgettitle {
 	margin-bottom: 10px;
+}
+
+.entry {
+	padding-bottom: 40px;
+}
+
+/* EVAL FORM STUFF */
+td {
+	padding: 10px 0;
+}
+
+.code {
+	color: red;
+	font-weight: bold;
 }
 
 	
