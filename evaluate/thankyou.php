@@ -1,8 +1,6 @@
 <?php
 /** Loads the WordPress Environment and Template */
 require('../wp-blog-header.php');
-include('../analyticstracking.php');
-
 get_header(); ?>
 
 	<div id="primary" class="site-content">

@@ -3,6 +3,8 @@
 	//Include database connection details
 	require_once('config.php');
 	
+	$table = "turkers_010712"; // update
+	
 	//Connect to mysql server
 	$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
 	if(!$link) {
@@ -35,6 +37,7 @@
 		return $str;
 	}
 	
+	
 	//Sanitize the POST values
 	$description = clean($_POST['description']);
 	$rating = $_POST['rating'];
@@ -44,14 +47,37 @@
 	
 
 	//Create INSERT query
-	$qry = "INSERT INTO turkers_010712(code, description, rating, action) VALUES('$code', '$description', '$rating', '$action')";
+	$qry = "INSERT INTO ".$table."(code, description, rating, action) VALUES('$code', '$description', '$rating', '$action')";
 	$result = mysql_query($qry);
 	
 	
 	//Check whether the query was successful or not
 	if($result) {
+		do_check($table);
+	
 		header("location: ./thankyou.php?code=".$code);
 	}else {
 		die("Query failed");
+	}
+	
+	
+	function do_check($t) {
+		$stay_qry = "SELECT COUNT(*) FROM ".$t." WHERE action='stay'";
+		$stay_res = mysql_query($stay_qry);
+		
+		$leave_qry = "SELECT COUNT(*) FROM ".$t." WHERE action='leave'";
+		$leave_res = mysql_query($leave_qry);
+		
+		if ($stay_res && $leave_res) {
+			$total = $stay_res + $leave_res;
+			if ($leave_res / $total > 0.75 && $total > 10) {
+				send_msg("leave");
+			}
+		}
+		//return $leave_res."-".$stay_res."-".$total."=".$leave_res/$total;
+	}
+	
+	function send_msg($msg) {
+		mail( '6173088817@messaging.sprintpcs.com', '', $msg);  
 	}
 ?>
