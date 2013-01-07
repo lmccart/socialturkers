@@ -78,6 +78,6 @@
 	}
 	
 	function send_msg($msg) {
-		mail( '6173088817@messaging.sprintpcs.com', '', $msg);  
+		mail( CELL_NUMBER, '', $msg);  
 	}
 ?>
