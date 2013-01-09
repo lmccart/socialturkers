@@ -26,6 +26,7 @@ body {
 	background-color:white;
 	margin: 40px;
 	line-height: 1.5em;
+	font-family: 'Helvetica';
 	
 	}
 #content {
@@ -192,6 +193,20 @@ h2 > a, .widgettitle {
 	padding-bottom: 40px;
 }
 
+table.tableizer-table {
+	font-family: 'Courier New', monospace;	
+	margin-left: -7px;
+} 
+.tableizer-table td, .tableizer-table th {
+	padding: 4px;
+	margin: 3px;
+}
+.tableizer-table th {
+	font-weight: bold;
+	text-align: left;
+}
+
+
 /* EVAL FORM STUFF */
 td {
 	padding: 10px 0;
@@ -201,5 +216,7 @@ td {
 	color: red;
 	font-weight: bold;
 }
+
+
 
 	
