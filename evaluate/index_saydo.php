@@ -82,13 +82,13 @@ session_start();
 					<tr><td></td></tr>
 					
 					<tr>
-					<td>Imagine the woman as an avatar that can move in different directions. What do you want her to do?</td></tr>
+					<td>What do you want her to say or do?</td></tr>
 					<tr><td>
-						<input type="radio" name="action" value="advance">Advance<br><br>
-						<input type="radio" name="action" value="back">Back off<br><br>
-						<input type="radio" name="action" value="side">Sidestep / change subject<br><br>
-						<input type="radio" name="action" value="stay">Stay put / idle<br><br>
-						Explanation <input style="width:400px; margin:0;" type="text" name="explanation"><br><br>
+						<input type="radio" name="action" value="stay">Stay because <input style="width:400px; margin:0;" type="text" name="stay"><br><br>
+						<input type="radio" name="action" value="say">Talk about <input style="width:400px; margin:0;" type="text" name="say"><br><br>
+						<input type="radio" name="action" value="act">Act <input style="width:400px; margin:0;" type="text" name="act"><br><br>
+						<input type="radio" name="action" value="ask">Ask <input style="width:400px; margin:0;" type="text" name="ask"><br><br>
+						<input type="radio" name="action" value="leave">Leave because <input style="width:400px; margin:0;" type="text" name="leave"><br><br>
 <br>
 					</td></tr>
 										
