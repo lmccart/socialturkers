@@ -46,7 +46,7 @@ session_start();
 	            }
 	        ?>
 	        
-			Please watch the video stream and decide what the woman in the interaction should do. She will receive a text message with instructions based on your response. Upon submitting your response, you will receive a code to enter into Amazon Mechanical Turk to be paid for your work. **You are welcome to submit but you can get paid through Amazon Mechanical Turk. You can go <a href="https://www.mturk.com/mturk/preview?groupId=20AC0RYNJ92N6XK9XUDJZUH328G94X">here</a> to complete this job.
+			Please watch the video stream and decide what the woman in the interaction should do. She will receive a text message with instructions based on your response. Upon submitting your response, you will receive a code to enter into Amazon Mechanical Turk to be paid for your work. **You are welcome to submit but you can get paid through Amazon Mechanical Turk.
 			</div>
 		</div>
 	</div>

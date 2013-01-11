@@ -22,8 +22,13 @@
 		}
 	}
 	
-	$max_action = array_search(max($vals), $vals);
-	send_msg(strtoupper($max_action));
+	// only send msg if someone has voted
+	if (max(array_values($vals)) == 0) {
+		send_msg('none');
+	} else {
+		$max_action = array_search(max($vals), $vals);
+		send_msg(strtoupper($max_action));
+	}
 
 	function send_msg($msg) {
 		$tmhOAuth = new tmhOAuth(array(
