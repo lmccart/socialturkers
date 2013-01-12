@@ -9,7 +9,7 @@
 	session_start();
 	
 	
-	$table = "turkers_011013"; // update
+	$table = "turkers_011113"; // update
 	
 	
 	$qry = "SELECT * FROM ".$table." WHERE timestamp BETWEEN DATE_SUB(NOW() , INTERVAL 10 MINUTE) AND NOW()";
@@ -38,7 +38,7 @@
 		  'user_secret'     => USER_SECRET,
 		));
 		
-		$tweetmsg = '@sotur1 '.$msg;
+		$tweetmsg = '@sotur1 '.$msg.' '.time(); // add time for distinct msgs
 		
 		$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
 		  'status' => $tweetmsg

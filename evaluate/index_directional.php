@@ -62,15 +62,8 @@ session_start();
 				<table border="0" width="625px" align="center" cellpadding="0" cellspacing="0" padding-bottom="40px">
 					
 					<tr>
-					<td>Describe how the woman appears to be feeling at this moment in at least one complete sentence. (If you want your response to be approved, please be specific. If you can't tell, give your best guess or interpretation.)</td></tr>
-					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="she_description"><?php echo $_SESSION['TEMP_SHE_DESCRIPTION']; ?></textarea></td>
-					</tr>   
-					
-					<tr><td></td></tr>
-					
-					<tr>
-					<td>Describe how the woman appears to be feeling at this moment in at least one complete sentence. (If you want your response to be approved, please be specific. If you can't tell, give your best guess or interpretation.)</td></tr>
-					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="he_description"><?php echo $_SESSION['TEMP_HE_DESCRIPTION']; ?></textarea></td>
+					<td>Describe what is happening at this moment in at least one complete sentence. (If you want your response to be approved, please be more specific than 'two people talking'. Give your interpretation of what is going on at the exact point in the interaction you are viewing.)</td></tr>
+					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="description"><?php echo $_SESSION['TEMP_DESCRIPTION']; ?></textarea></td>
 					</tr>   
 					
 					<tr><td></td></tr>
@@ -89,20 +82,13 @@ session_start();
 					<tr><td></td></tr>
 					
 					<tr>
-					<td>Imagine the woman as an avatar. What do you want her to do?</td></tr>
+					<td>Imagine the woman as an avatar that can move in different directions. What do you want her to do?</td></tr>
 					<tr><td>
 						<input type="radio" name="action" value="advance">Advance<br><br>
 						<input type="radio" name="action" value="back">Back off<br><br>
 						<input type="radio" name="action" value="side">Sidestep / change subject<br><br>
-						<input type="radio" name="action" value="question">Question<br><br>
-						<input type="radio" name="action" value="agree">Agree<br><br>
-						<input type="radio" name="action" value="disagree">Disagree<br><br>
-						<input type="radio" name="action" value="smile">Smile<br><br>
-						<input type="radio" name="action" value="laugh">Laugh<br><br>
-						<input type="radio" name="action" value="challenge">Challenge<br><br>
-						<input type="radio" name="action" value="other">Other <input style="width:400px; margin:0;" type="text" name="other"><br><br>
-						Please explain your choice.</td></tr>
-					<tr><td><textarea style="width:400px; height: 200px; margin:0;" type="text" name="explanation"></textarea><br><br>
+						<input type="radio" name="action" value="stay">Stay put / idle<br><br>
+						Explanation <input style="width:400px; margin:0;" type="text" name="explanation"><br><br>
 <br>
 					</td></tr>
 										

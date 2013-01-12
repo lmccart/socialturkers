@@ -11,7 +11,7 @@
 	$errflag = false;
 	
 	
-	$table = "turkers_011113"; // update
+	$table = "turkers_011013"; // update
 	
 
 	
@@ -37,23 +37,16 @@
 	
 	
 	//Sanitize the POST values
-	$she_description = clean($_POST['she_description']);
-	$he_description = clean($_POST['he_description']);
-	$_SESSION['TEMP_SHE_DESCRIPTION'] = $she_description;
-	$_SESSION['TEMP_HE_DESCRIPTION'] = $he_description;
+	$description = clean($_POST['description']);
+	$_SESSION['TEMP_DESCRIPTION'] = $description;
 	$rating = $_POST['rating'];
 	$action = $_POST['action'];
 	
-	$other = clean($_POST['other']);
 	$explanation = clean($_POST['explanation']);
 		
 	//Input Validations
-	if($she_description == '') {
-		$errmsg_arr[] = 'Please enter a description for the way the woman is feeling.';
-		$errflag = true;
-	}
-	if($he_description == '') {
-		$errmsg_arr[] = 'Please enter a description for the way the man is feeling.';
+	if($description == '') {
+		$errmsg_arr[] = 'Please enter a description.';
 		$errflag = true;
 	}
 	if($rating == '') {
@@ -82,7 +75,7 @@
 	$code = rand_string(10);
 
 	//Create INSERT query
-	$qry = "INSERT INTO ".$table."(code, she_description, he_description, rating, action, other, explanation) VALUES('$code', '$she_description', '$he_description', '$rating', '$action', '$other', '$explanation')";
+	$qry = "INSERT INTO ".$table."(code, description, rating, action, explanation) VALUES('$code', '$description', '$rating', '$action', '$explanation')";
 	$result = mysql_query($qry);
 
 	//Check whether the query was successful or not
