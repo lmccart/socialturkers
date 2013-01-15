@@ -2,6 +2,9 @@
 	
 	//Include database connection details
 	require_once('config.php');
+	require('../tmhOAuth/tmhOAuth.php');
+	require('../tmhOAuth/tmhUtilities.php');
+
 	session_start();
 	
 	//Array to store validation errors
@@ -91,6 +94,8 @@
 	//Check whether the query was successful or not
 	if($result) {
 	
+		if ($answer) send_msg($answer);
+	
 	    unset($_SESSION['TEMP_SHE_DESCRIPTION']);
 	    unset($_SESSION['TEMP_HE_DESCRIPTION']);
 	    unset($_SESSION['TEMP_ANSWER']);
@@ -99,6 +104,25 @@
 		header("location: ./thankyou.php?code=".$code);
 	}else {
 		die("Query failed");
+	}
+	
+	
+	
+	function send_msg($msg) {
+		$tmhOAuth = new tmhOAuth(array(
+		  'consumer_key'    => CONSUMER_KEY,
+		  'consumer_secret' => CONSUMER_SECRET,
+		  'user_token'      => USER_TOKEN,
+		  'user_secret'     => USER_SECRET,
+		));
+		
+		//$tweetmsg = '@sotur1 '.$msg; // add time for distinct msgs
+		
+		$code = $tmhOAuth->request('POST', $tmhOAuth->url('1/statuses/update'), array(
+		  'status' => $msg
+		));
+		mail('6173088817@messaging.sprintpcs.com', '', $msg);  
+		//mail('laurmccarthy@gmail.com', '', $msg);  
 	}
 	
 
