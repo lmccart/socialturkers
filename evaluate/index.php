@@ -69,7 +69,7 @@ session_start();
 					<tr><td></td></tr>
 					
 					<tr>
-					<td>Describe how the woman appears to be feeling at this moment in at least one complete sentence. (If you want your response to be approved, please be specific. If you can't tell, give your best guess or interpretation.)</td></tr>
+					<td>Describe how the man appears to be feeling at this moment in at least one complete sentence. (If you want your response to be approved, please be specific. If you can't tell, give your best guess or interpretation.)</td></tr>
 					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="he_description"><?php echo $_SESSION['TEMP_HE_DESCRIPTION']; ?></textarea></td>
 					</tr>   
 					
@@ -102,7 +102,7 @@ session_start();
 						<input type="radio" name="action" value="challenge">Challenge<br><br>
 						<input type="radio" name="action" value="other">Other <input style="width:400px; margin:0;" type="text" name="other"><br><br>
 						Please explain your choice.</td></tr>
-					<tr><td><textarea style="width:400px; height: 200px; margin:0;" type="text" name="explanation"></textarea><br><br>
+					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="explanation"></textarea><br><br>
 <br>
 					</td></tr>
 										
