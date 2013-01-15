@@ -89,7 +89,7 @@ session_start();
 					<tr><td></td></tr>
 					
 					<tr>
-					<td>Imagine the woman as an avatar. What do you want her to do?</td></tr>
+					<td>What do you want the woman to do?</td></tr>
 					<tr><td>
 						<input type="radio" name="action" value="advance">Advance<br><br>
 						<input type="radio" name="action" value="back">Back off<br><br>
