@@ -11,7 +11,7 @@
 	$errflag = false;
 	
 	
-	$table = "turkers_011413"; // update
+	$table = "turkers_011113"; // update
 	
 
 	
@@ -42,11 +42,10 @@
 	$_SESSION['TEMP_SHE_DESCRIPTION'] = $she_description;
 	$_SESSION['TEMP_HE_DESCRIPTION'] = $he_description;
 	$rating = $_POST['rating'];
-	$question = $_SESSION['QUESTION'];
-	$answer = $_POST['answer'];
-	$_SESSION['TEMP_ANSWER'] = $answer;
-	$explanation = $_POST['explanation'];
-	$_SESSION['TEMP_EXPLANATION'] = $explanation;
+	$action = $_POST['action'];
+	
+	$other = clean($_POST['other']);
+	$explanation = clean($_POST['explanation']);
 		
 	//Input Validations
 	if($she_description == '') {
@@ -61,16 +60,14 @@
 		$errmsg_arr[] = 'Please enter your rating.';
 		$errflag = true;
 	}
-	if (isset($_SESSION['QUESTION'])) {
-		if($answer == '') {
-			$errmsg_arr[] = 'Please enter an answer.';
-			$errflag = true;
-		}  
-		if($explanation == '') {
-			$errmsg_arr[] = 'Please enter an explanation.';
-			$errflag = true;
-		}  
-	}
+	if($action == '') {
+		$errmsg_arr[] = 'Please enter an action.';
+		$errflag = true;
+	}  
+	if($explanation == '') {
+		$errmsg_arr[] = 'Please enter an explanation.';
+		$errflag = true;
+	}  	
 	
 	//If there are input validations, redirect back to the registration form
 	if($errflag) {
@@ -85,17 +82,13 @@
 	$code = rand_string(10);
 
 	//Create INSERT query
-	$qry = "INSERT INTO ".$table."(code, she_description, he_description, rating, question, answer, explanation) VALUES('$code', '$she_description', '$he_description', '$rating', '$question', '$answer', '$explanation')";
+	$qry = "INSERT INTO ".$table."(code, she_description, he_description, rating, action, other, explanation) VALUES('$code', '$she_description', '$he_description', '$rating', '$action', '$other', '$explanation')";
 	$result = mysql_query($qry);
 
 	//Check whether the query was successful or not
 	if($result) {
 	
-	    unset($_SESSION['TEMP_SHE_DESCRIPTION']);
-	    unset($_SESSION['TEMP_HE_DESCRIPTION']);
-	    unset($_SESSION['TEMP_ANSWER']);
-	    unset($_SESSION['TEMP_EXPLANATION']);
-	    unset($_SESSION['QUESTION']);
+	    unset($_SESSION['TEMP_DESCRIPTION']);
 		header("location: ./thankyou.php?code=".$code);
 	}else {
 		die("Query failed");

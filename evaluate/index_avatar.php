@@ -1,16 +1,8 @@
 <?php
 /** Loads the WordPress Environment and Template */
 require('../wp-blog-header.php');
-require_once('config.php');
+
 session_start();
-
-// get question
-$q_table = "turkers_011413_questions"; 
-$qry = "SELECT * FROM ".$q_table." ORDER BY timestamp DESC LIMIT 1";
-$res = mysql_query($qry);
-
-if ($res && mysql_num_rows($res) > 0) $_SESSION['QUESTION'] = mysql_result($res,0,"question");
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
@@ -96,23 +88,24 @@ if ($res && mysql_num_rows($res) > 0) $_SESSION['QUESTION'] = mysql_result($res,
 					
 					<tr><td></td></tr>
 					
-					<?php if(isset ($_SESSION['QUESTION'])) {
-						
-						echo '<tr>
-					<td>Answer this question from one of the participants: '.$_SESSION['QUESTION'].'</td></tr>
-					<tr><td><textarea style="width:613px; height: 50px; margin:0;" type="text" name="answer">'.$_SESSION['TEMP_ANSWER'].'</textarea></td>
-					</tr>   
-					
-					<tr><td></td></tr>
-					
 					<tr>
-					<td>Please explain your choice.</td></tr>
-					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="explanation">'.$_SESSION['TEMP_EXPLANATION'].'</textarea></td>
-					</tr>   ';
-					
-
-					} ?>
-															
+					<td>What do you want the woman to do?</td></tr>
+					<tr><td>
+						<input type="radio" name="action" value="advance">Advance<br><br>
+						<input type="radio" name="action" value="back">Back off<br><br>
+						<input type="radio" name="action" value="side">Sidestep / change subject<br><br>
+						<input type="radio" name="action" value="question">Question<br><br>
+						<input type="radio" name="action" value="agree">Agree<br><br>
+						<input type="radio" name="action" value="disagree">Disagree<br><br>
+						<input type="radio" name="action" value="smile">Smile<br><br>
+						<input type="radio" name="action" value="laugh">Laugh<br><br>
+						<input type="radio" name="action" value="challenge">Challenge<br><br>
+						<input type="radio" name="action" value="other">Other <input style="width:400px; margin:0;" type="text" name="other"><br><br>
+						Please explain your choice.</td></tr>
+					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="explanation"></textarea><br><br>
+<br>
+					</td></tr>
+										
 					<tr>
 					<!--<?php if (strpos($_SERVER['HTTP_REFERER'],'mturk') !== false) echo' <td><input type="submit"></td>' ?>-->
 					<td><input type="submit"></td>
