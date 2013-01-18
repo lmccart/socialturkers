@@ -14,7 +14,7 @@
 	$errflag = false;
 	
 	
-	$table = "turkers_011613"; // update
+	$table = "turkers_011413"; // update
 	
 
 	
@@ -45,10 +45,12 @@
 	$_SESSION['TEMP_SHE_DESCRIPTION'] = $she_description;
 	$_SESSION['TEMP_HE_DESCRIPTION'] = $he_description;
 	$rating = $_POST['rating'];
-	$chosen_line = $_POST['chosen_line'];
-	$suggested_line = $_POST['suggested_line'];
-	$_SESSION['TEMP_LINE'] = $suggested_line;
-	
+	$question = $_SESSION['QUESTION'];
+	$answer = $_POST['answer'];
+	$_SESSION['TEMP_ANSWER'] = $answer;
+	$explanation = $_POST['explanation'];
+	$_SESSION['TEMP_EXPLANATION'] = $explanation;
+		
 	//Input Validations
 	if($she_description == '') {
 		$errmsg_arr[] = 'Please enter a description for the way the woman is feeling.';
@@ -62,16 +64,15 @@
 		$errmsg_arr[] = 'Please enter your rating.';
 		$errflag = true;
 	}
-	if (isset($_SESSION['LINES'])) {
-		if($chosen_line == '') {
-			$errmsg_arr[] = 'Please vote for a line from the list for the woman to say.';
+	if (isset($_SESSION['QUESTION'])) {
+		if($answer == '') {
+			$errmsg_arr[] = 'Please enter an answer.';
 			$errflag = true;
 		}  
-	}
-	
-	if ($suggested_line == '') {
-		$errmsg_arr[] = 'Please suggest a new line for the woman to say.';
-		$errflag = true;	
+		if($explanation == '') {
+			$errmsg_arr[] = 'Please enter an explanation.';
+			$errflag = true;
+		}  
 	}
 	
 	//If there are input validations, redirect back to the registration form
@@ -86,25 +87,9 @@
 	
 	$code = rand_string(10);
 
-	// insert into responses
-	$qry = "INSERT INTO ".$table."(code, she_description, he_description, rating, chosen_line, suggested_line) VALUES('$code', '$she_description', '$he_description', '$rating', '$chosen_line', '$suggested_line')";
+	//Create INSERT query
+	$qry = "INSERT INTO ".$table."(code, she_description, he_description, rating, question, answer, explanation) VALUES('$code', '$she_description', '$he_description', '$rating', '$question', '$answer', '$explanation')";
 	$result = mysql_query($qry);
-	
-	// insert suggested line
-	$suggested_qry = "INSERT INTO ".$table."_lines(suggested_line) VALUES('$suggested_line')";
-	$suggested_result = mysql_query($suggested_qry);
-
-	// update chosen line
-	$chosen_qry = "UPDATE ".$table."_lines SET votes=votes+1 WHERE suggested_line='$chosen_line'";
-	$chosen_result = mysql_query($chosen_qry);
-	
-	// check if line ready to be used
-	$ready_qry = "SELECT * FROM ".$table."_lines WHERE suggested_line='$chosen_line' AND votes > 3";
-	$ready_result = mysql_query($ready_qry);
-	
-	if ($ready_result && mysql_num_rows($ready_result) > 0) {
-		send_msg($suggested_line);
-	} 
 
 	//Check whether the query was successful or not
 	if($result) {
@@ -113,7 +98,9 @@
 	
 	    unset($_SESSION['TEMP_SHE_DESCRIPTION']);
 	    unset($_SESSION['TEMP_HE_DESCRIPTION']);
-	    unset($_SESSION['TEMP_LINE']);
+	    unset($_SESSION['TEMP_ANSWER']);
+	    unset($_SESSION['TEMP_EXPLANATION']);
+	    unset($_SESSION['QUESTION']);
 		header("location: ./thankyou.php?code=".$code);
 	}else {
 		die("Query failed");

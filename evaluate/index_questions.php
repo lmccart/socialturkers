@@ -4,21 +4,12 @@ require('../wp-blog-header.php');
 require_once('config.php');
 session_start();
 
-// reset lines
-unset($_SESSION['LINES']);
-
 // get question
-$q_table = "turkers_011613_lines"; 
-$qry = "SELECT * FROM ".$q_table." WHERE votes < 4 ORDER BY votes DESC, timestamp DESC LIMIT 5";
+$q_table = "turkers_011413_questions"; 
+$qry = "SELECT * FROM ".$q_table." ORDER BY timestamp DESC LIMIT 1";
 $res = mysql_query($qry);
 
-if ($res && mysql_num_rows($res) > 0) {
-	$_SESSION['LINES'] = array();
-		
-	for($i = 0; $i < mysql_num_rows($res); $i++){
-		array_push($_SESSION['LINES'], mysql_result($res,$i,"suggested_line"));
-	}
-}
+if ($res && mysql_num_rows($res) > 0) $_SESSION['QUESTION'] = mysql_result($res,0,"question");
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -105,27 +96,23 @@ if ($res && mysql_num_rows($res) > 0) {
 					
 					<tr><td></td></tr>
 					
-					<?php if(isset ($_SESSION['LINES'])) {
+					<?php if(isset ($_SESSION['QUESTION'])) {
 						
-						echo '<tr><td>Vote for one of the following lines for the woman to say:</td></tr>';
-						
-						echo '<tr><td>';
-						
-						for($i = 0; $i < count($_SESSION['LINES']); $i++){
-							echo '<input type="radio" name="chosen_line" value="'.$_SESSION['LINES'][$i].'">'.$_SESSION['LINES'][$i].'<br><br>';
-						}
-						echo '</td></tr>';
+						echo '<tr>
+					<td>Answer this question from one of the participants: '.$_SESSION['QUESTION'].'</td></tr>
+					<tr><td><textarea style="width:613px; height: 50px; margin:0;" type="text" name="answer">'.$_SESSION['TEMP_ANSWER'].'</textarea></td>
+					</tr>   
 					
-						echo '<tr><td></td></tr>';
-						
-					} ?>
-							
+					<tr><td></td></tr>
+					
 					<tr>
-					<td>Please suggest another line for the woman to say.</td></tr>
-					<tr><td><textarea style="width:613px; height: 50px; margin:0;" type="text" name="suggested_line"><?php echo $_SESSION['TEMP_LINE']; ?></textarea></td>
-					</tr>
+					<td>Please explain your choice.</td></tr>
+					<tr><td><textarea style="width:613px; height: 200px; margin:0;" type="text" name="explanation">'.$_SESSION['TEMP_EXPLANATION'].'</textarea></td>
+					</tr>   ';
 					
-								
+
+					} ?>
+															
 					<tr>
 					<!--<?php if (strpos($_SERVER['HTTP_REFERER'],'mturk') !== false) echo' <td><input type="submit"></td>' ?>-->
 					<td><input type="submit"></td>
