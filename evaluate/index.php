@@ -8,7 +8,7 @@ session_start();
 unset($_SESSION['LINES']);
 
 // get question
-$q_table = "turkers_011613_lines"; 
+$q_table = "turkers_012613_questions"; 
 $qry = "SELECT * FROM ".$q_table." WHERE votes < 4 ORDER BY votes DESC, timestamp DESC LIMIT 5";
 $res = mysql_query($qry);
 
@@ -107,7 +107,7 @@ if ($res && mysql_num_rows($res) > 0) {
 					
 					<?php if(isset ($_SESSION['LINES'])) {
 						
-						echo '<tr><td>Vote for one of the following lines for the woman to say:</td></tr>';
+						echo '<tr><td>Vote for one of the following questions for the woman to ask:</td></tr>';
 						
 						echo '<tr><td>';
 						
@@ -121,7 +121,7 @@ if ($res && mysql_num_rows($res) > 0) {
 					} ?>
 							
 					<tr>
-					<td>Please suggest another line for the woman to say.</td></tr>
+					<td>Please suggest another question for the woman to ask.</td></tr>
 					<tr><td><textarea style="width:613px; height: 50px; margin:0;" type="text" name="suggested_line"><?php echo $_SESSION['TEMP_LINE']; ?></textarea></td>
 					</tr>
 					

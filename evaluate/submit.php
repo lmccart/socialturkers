@@ -14,7 +14,7 @@
 	$errflag = false;
 	
 	
-	$table = "turkers_011613"; // update
+	$table = "turkers_012613"; // update
 	
 
 	
@@ -45,8 +45,8 @@
 	$_SESSION['TEMP_SHE_DESCRIPTION'] = $she_description;
 	$_SESSION['TEMP_HE_DESCRIPTION'] = $he_description;
 	$rating = $_POST['rating'];
-	$chosen_line = $_POST['chosen_line'];
-	$suggested_line = $_POST['suggested_line'];
+	$chosen_line = clean($_POST['chosen_line']);
+	$suggested_line = clean($_POST['suggested_line']);
 	$_SESSION['TEMP_LINE'] = $suggested_line;
 	
 	//Input Validations
@@ -64,13 +64,13 @@
 	}
 	if (isset($_SESSION['LINES'])) {
 		if($chosen_line == '') {
-			$errmsg_arr[] = 'Please vote for a line from the list for the woman to say.';
+			$errmsg_arr[] = 'Please vote for a question from the list for the woman to ask.';
 			$errflag = true;
 		}  
 	}
 	
 	if ($suggested_line == '') {
-		$errmsg_arr[] = 'Please suggest a new line for the woman to say.';
+		$errmsg_arr[] = 'Please suggest a new question for the woman to ask.';
 		$errflag = true;	
 	}
 	
@@ -91,15 +91,15 @@
 	$result = mysql_query($qry);
 	
 	// insert suggested line
-	$suggested_qry = "INSERT INTO ".$table."_lines(suggested_line) VALUES('$suggested_line')";
+	$suggested_qry = "INSERT INTO ".$table."_questions(suggested_line) VALUES('$suggested_line')";
 	$suggested_result = mysql_query($suggested_qry);
 
 	// update chosen line
-	$chosen_qry = "UPDATE ".$table."_lines SET votes=votes+1 WHERE suggested_line='$chosen_line'";
+	$chosen_qry = "UPDATE ".$table."_questions SET votes=votes+1 WHERE suggested_line='$chosen_line'";
 	$chosen_result = mysql_query($chosen_qry);
 	
 	// check if line ready to be used
-	$ready_qry = "SELECT * FROM ".$table."_lines WHERE suggested_line='$chosen_line' AND votes > 3";
+	$ready_qry = "SELECT * FROM ".$table."_questions WHERE suggested_line='$chosen_line' AND votes > 3";
 	$ready_result = mysql_query($ready_qry);
 	
 	if ($ready_result && mysql_num_rows($ready_result) > 0) {
